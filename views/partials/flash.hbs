@@ -1,0 +1,8 @@
+{{#if sessionFlash.message}}
+    <div role="alert" class="m-3 alert {{ sessionFlash.type }} alert-dismissible fade show">
+        {{ sessionFlash.message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+{{/if}}

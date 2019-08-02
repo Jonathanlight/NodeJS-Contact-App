@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="col">
+        <div class="jumbotron mt-4">
+            {{> flash }}
+            {{# with contact}}
+                <h1 class="display-4">{{prenom}} {{nom}}</h1>
+            <div class="container">
+            <div class="row">
+                <div class="col-8">
+                    <hr class="my-4">
+                    <p class="lead"><strong>Email : </strong>{{email}}</p>
+                    <p class="lead"><strong>Téléphone : </strong>{{tel}}</p>
+                </div>
+            {{/with}}
+            <div class="col-4">
+                <img class="text-center float-right" src="{{ src }}" alt="vCard QrCode">
+            </div>
+        </div>
+        </div>
+            <hr class="my-4">
+            <a class="btn btn-sm btn-warning" href="/contact/{{id}}/edit" role="button"><i class="fas fa-pen"></i>
+                Modifier la fiche</a>
+            <a class="btn btn-sm btn-danger" href="/contact/{{id}}/delete" role="button"><i class="fas fa-trash"></i>
+                Supprimer la fiche</a>
+            <a class="btn btn-sm btn-primary" href="/contacts" role="button"><i class="fas fa-users"></i> Retourner aux
+                contacts</a>
+
+        </div>
+    </div>
+</div>
